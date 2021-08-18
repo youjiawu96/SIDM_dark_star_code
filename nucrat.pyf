@@ -1,0 +1,27 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module nucrat ! in 
+    interface  ! in :nucrat
+        subroutine nucrat(rho,t,np,nd,nhe3,dtime,e,xhe4,xc,xn,xo) ! in :nucrat:nucrat.f
+            double precision intent(in) :: rho
+            double precision intent(in) :: t
+            double precision intent(in) :: np
+            double precision intent(in) :: nd
+            double precision intent(in) :: nhe3
+            double precision intent(in) :: dtime
+            double precision intent(out) :: e
+            double precision intent(in) :: xhe4
+            double precision intent(in) :: xc
+            double precision intent(in) :: xn
+            double precision intent(in) :: xo
+            double precision dimension(14) :: xca
+            double precision dimension(14) :: h1
+            double precision dimension(14) :: a
+            common /abund/ xca,h1,a
+        end subroutine nucrat
+    end interface 
+end python module nucrat
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
